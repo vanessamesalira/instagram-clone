@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-cadastro',
@@ -8,6 +9,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class CadastroComponent implements OnInit {
 
   @Output() public exibirPainel: EventEmitter<string> = new EventEmitter<string>()
+
+  formulario: FormGroup = new FormGroup({
+    'email': new FormControl(null),
+
+  })
 
   constructor() { }
 
